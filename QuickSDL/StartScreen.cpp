@@ -2,6 +2,7 @@
 
 #include "StartScreen.h"
 
+
 StartScreen::StartScreen() {
      mTimer = Timer::Instance();
      mInput = InputManager::Instance();
@@ -11,15 +12,28 @@ StartScreen::StartScreen() {
      mPlayerOne = new Texture("1UP", "emulator.ttf", 28, {200,0,0});
      mHighScore = new Texture("High Score", "emulator.ttf", 28, { 200,0,0 });
      mPlayerTwo = new Texture("2UP", "emulator.ttf", 28, { 200,0,0 });
+     mPlayerOneScore = new Scoreboard();
+     mTopScore = new Scoreboard;
+     mPlayerTwoScore= new Scoreboard;
 
      //
      mPlayerOne->Parent(mTopBar);
      mHighScore ->Parent(mTopBar);
      mPlayerTwo ->Parent(mTopBar);
+     mPlayerOneScore->Parent(mTopBar);
+     mTopScore->Parent(mTopBar);
+     mPlayerTwoScore->Parent(mTopBar);
+
 
      mPlayerOne->Pos(Vector2(-Graphics::Instance()->SCREEN_WIDTH*0.38f, 0.0f));
      mHighScore->Pos(Vector2(-30.0f, 0.0f));
      mPlayerTwo->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.35f, 0.0f));
+
+     mPlayerOneScore->Pos(Vector2(-Graphics::Instance()->SCREEN_WIDTH*0.30f, 40.0f));
+     mTopScore->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.05f, 40.0f));
+     mPlayerTwoScore->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.45f, 40.0f));
+
+     mTopScore->Score(30);
 
      mTopBar->Parent(this);
      
@@ -70,17 +84,12 @@ StartScreen::StartScreen() {
      mRights -> Pos(Vector2(485.0f, 190.0f));
 
      mBottomBar->Parent(this);
-
+     
      //screen animation variables
-     mAnimationStartPos = Vector2(0.0f, Graphics::Instance()->SCREEN_HEIGHT);
-     mAnimationEndPos = VEC2_ZERO;
-     mAnimationTotalTime = 5.0f;
-     mAnitmationTimer = 0.0f;
-     mAnimationDone = false;
-
-     Pos(mAnimationStartPos);
+     ResetAnimation();
 
 }
+
 
 StartScreen::~StartScreen() {
      //freeing topbar entities 
@@ -92,6 +101,12 @@ StartScreen::~StartScreen() {
      mPlayerTwo = NULL;
      delete mHighScore;
      mHighScore = NULL;
+     delete mPlayerOneScore;
+     mPlayerOneScore = NULL;
+     delete mTopScore;
+     mTopScore = NULL;
+     delete mPlayerTwoScore;
+     mPlayerTwoScore = NULL;
 
      //free play mode entities 
      delete mPlayMode;
@@ -120,6 +135,22 @@ StartScreen::~StartScreen() {
      mAnimatedLogo = NULL;
 
 }
+
+void StartScreen::ResetAnimation() {
+     //screen animation variables
+     mAnimationStartPos = Vector2(0.0f, Graphics::Instance()->SCREEN_HEIGHT);
+     mAnimationEndPos = VEC2_ZERO;
+     mAnimationTotalTime = 5.0f;
+     mAnitmationTimer = 0.0f;
+     mAnimationDone = false;
+
+     Pos(mAnimationStartPos);
+}
+
+int StartScreen::SelectedMode() {
+     return mSelectedMode;
+}
+
 void StartScreen::ChangeSelectedMode(int change) {
      mSelectedMode += change;
      if (mSelectedMode < 0)
@@ -130,6 +161,8 @@ void StartScreen::ChangeSelectedMode(int change) {
      mCursor->Pos(mCursorStartPos + mCursorOffset * mSelectedMode);
 
 }
+
+
 void StartScreen::Update() {
      if (!mAnimationDone) {
           mAnitmationTimer += mTimer->DeltaTime();
@@ -154,7 +187,9 @@ void StartScreen::Render() {
      mPlayerOne->Render();
      mPlayerTwo ->Render();
      mHighScore->Render();
-     
+     mPlayerOneScore->Render();
+     mTopScore->Render();
+     mPlayerTwoScore->Render();
      //logo
      if (!mAnimationDone)
           mLogo->Render();

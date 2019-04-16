@@ -31,6 +31,9 @@
     <Filter Include="Source Files\Nuzzle">
       <UniqueIdentifier>{263d0194-6c2d-4a32-ad54-63590ea82d97}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Temp Files">
+      <UniqueIdentifier>{683efa4e-6fda-4010-bc85-efee63c38325}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathHelper.h">
@@ -66,6 +69,18 @@
     <ClInclude Include="StartScreen.h">
       <Filter>Header Files\Nuzzle</Filter>
     </ClInclude>
+    <ClInclude Include="ScreenManager.h">
+      <Filter>Header Files\Nuzzle</Filter>
+    </ClInclude>
+    <ClInclude Include="Scoreboard.h">
+      <Filter>Header Files\Nuzzle</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScreen.h">
+      <Filter>Header Files\Nuzzle</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaySideBar.h">
+      <Filter>Header Files\Nuzzle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -99,6 +114,18 @@
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
     <ClCompile Include="StartScreen.cpp">
+      <Filter>Source Files\Nuzzle</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenManager.cpp">
+      <Filter>Source Files\Nuzzle</Filter>
+    </ClCompile>
+    <ClCompile Include="Scoreboard.cpp">
+      <Filter>Source Files\Nuzzle</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScreen.cpp">
+      <Filter>Source Files\Nuzzle</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaySideBar.cpp">
       <Filter>Source Files\Nuzzle</Filter>
     </ClCompile>
   </ItemGroup>

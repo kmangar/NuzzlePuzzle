@@ -11,7 +11,7 @@
 //----------------------------------------------------------------
 #include "AudioManager.h"
 #include "Timer.h"
-#include "StartScreen.h"
+#include "ScreenManager.h"
 
 //----------------------------------------------------------------
 // QuickSDL
@@ -32,7 +32,7 @@ namespace QuickSDL {
 		//Used to exit the game loop
 		bool mQuit;
 
-		//List of Managers to be initialized and released
+		//List of Managers to be initialized and released 
 		Graphics* mGraphics;
 		AssetManager* mAssetMgr;
 		InputManager* mInputMgr;
@@ -44,7 +44,7 @@ namespace QuickSDL {
 		// Used to catch the event when the user exits the game
 		SDL_Event mEvents;
 
-          StartScreen* mStartScreen;
+          ScreenManager* mScreenMgr;
      
 
 

@@ -3,6 +3,7 @@
 
 #include "AnimatedTexture.h"
 #include "InputManager.h"
+#include "Scoreboard.h"
 
 using namespace QuickSDL;
 
@@ -17,6 +18,9 @@ private:
      Texture * mPlayerOne;
      Texture * mHighScore;
      Texture * mPlayerTwo;
+     Scoreboard* mPlayerOneScore;
+     Scoreboard* mTopScore;
+     Scoreboard* mPlayerTwoScore;
 
      //Logo entities 
      Texture* mLogo;
@@ -49,6 +53,9 @@ private:
 public: 
      StartScreen();
      ~StartScreen();
+
+     void ResetAnimation();
+     int SelectedMode();
 
      void ChangeSelectedMode(int change);
 
