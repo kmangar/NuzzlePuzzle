@@ -100,24 +100,6 @@ Board::~Board() {
    
 }
 
-bool Board::check() {
-
-     for (int i = 0 ; i < 9; i++)
-     {
-          if (i == (9 - 1))
-          {
-               return true;
-          }
-          else if (i + 1 != matrix[i])
-          {
-               return false;
-          }
-
-     }
-
-     return true;
-}
-
 
 void Board::Update() {
 

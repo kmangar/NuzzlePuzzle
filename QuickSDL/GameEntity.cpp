@@ -30,7 +30,7 @@ namespace QuickSDL {
 
 		mPos = pos;
 	}
-     void GameEntity::Id() {}
+    
 
 	Vector2 GameEntity::Pos(SPACE space) {
 
