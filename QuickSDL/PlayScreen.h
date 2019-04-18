@@ -5,6 +5,7 @@
 #include "Texture.h"
 #include "InputManager.h"
 #include "PlaySideBar.h"
+#include "Board.h"
 
 using namespace QuickSDL;
 
@@ -14,6 +15,7 @@ private:
      InputManager* mInput;
 
      PlaySideBar* mSideBar;
+     Board* mBoard;
 
 public:
      PlayScreen();

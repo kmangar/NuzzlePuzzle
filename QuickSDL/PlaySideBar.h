@@ -14,17 +14,20 @@ private:
 
      Texture* mBestLabel;
      Texture* mCurrentLabel;
-     Texture* mTimeLabel;
      Texture* mTable;
+     Texture* mTitle;
 
      Scoreboard* mBestScoreBoard;
-
+     Scoreboard* mCurrentScoreBoard;
+    
 
 public:
      PlaySideBar();
      ~PlaySideBar();
 
      void SetBestMove(int Score);
+
+     void SetCurrentMove(int Score);
 
      void Update();
 

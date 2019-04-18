@@ -81,6 +81,15 @@
     <ClInclude Include="PlaySideBar.h">
       <Filter>Header Files\Nuzzle</Filter>
     </ClInclude>
+    <ClInclude Include="Nuzzle.h">
+      <Filter>Header Files\Nuzzle</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Header Files\Nuzzle</Filter>
+    </ClInclude>
+    <ClInclude Include="HowToPlay.h">
+      <Filter>Header Files\Nuzzle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -126,6 +135,12 @@
       <Filter>Source Files\Nuzzle</Filter>
     </ClCompile>
     <ClCompile Include="PlaySideBar.cpp">
+      <Filter>Source Files\Nuzzle</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Source Files\Nuzzle</Filter>
+    </ClCompile>
+    <ClCompile Include="HowToPlay.cpp">
       <Filter>Source Files\Nuzzle</Filter>
     </ClCompile>
   </ItemGroup>

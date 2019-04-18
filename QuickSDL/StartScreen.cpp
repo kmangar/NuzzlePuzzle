@@ -2,7 +2,6 @@
 
 #include "StartScreen.h"
 
-
 StartScreen::StartScreen() {
      mTimer = Timer::Instance();
      mInput = InputManager::Instance();
@@ -24,7 +23,6 @@ StartScreen::StartScreen() {
      mTopScore->Parent(mTopBar);
      mPlayerTwoScore->Parent(mTopBar);
 
-
      mPlayerOne->Pos(Vector2(-Graphics::Instance()->SCREEN_WIDTH*0.38f, 0.0f));
      mHighScore->Pos(Vector2(-30.0f, 0.0f));
      mPlayerTwo->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.35f, 0.0f));
@@ -44,10 +42,8 @@ StartScreen::StartScreen() {
      mLogo->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.45f, Graphics::Instance()->SCREEN_HEIGHT*0.3f));
      mAnimatedLogo->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.45f, Graphics::Instance()->SCREEN_HEIGHT*0.3f));
 
-
      mLogo->Parent(this);
      mAnimatedLogo->Parent(this);
-
      
      //play mode entites 
      mPlayMode = new GameEntity(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.5f, Graphics::Instance()->SCREEN_HEIGHT*0.55f));
@@ -71,7 +67,7 @@ StartScreen::StartScreen() {
 
      //Bottom Bar Entities
      mBottomBar = new GameEntity(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.f, Graphics::Instance()->SCREEN_HEIGHT*0.7f));
-     mNamco = new Texture("namco", "namco__.ttf", 34, {200,0,0});
+     mNamco = new Texture("khyaco", "namco__.ttf", 34, {200,0,0});
      mDate = new Texture("2019 NUZZLE LTD.", "emulator.ttf", 28, { 230,230,230 });
      mRights = new Texture("ALL RIGHTS RESERVED", "emulator.ttf", 28, { 230,230,230 });
 
@@ -89,7 +85,6 @@ StartScreen::StartScreen() {
      ResetAnimation();
 
 }
-
 
 StartScreen::~StartScreen() {
      //freeing topbar entities 
@@ -159,9 +154,7 @@ void StartScreen::ChangeSelectedMode(int change) {
           mSelectedMode = 0;
 
      mCursor->Pos(mCursorStartPos + mCursorOffset * mSelectedMode);
-
 }
-
 
 void StartScreen::Update() {
      if (!mAnimationDone) {
@@ -183,6 +176,7 @@ void StartScreen::Update() {
                ChangeSelectedMode(-1);
      }
 }
+
 void StartScreen::Render() {
      mPlayerOne->Render();
      mPlayerTwo ->Render();
@@ -205,6 +199,4 @@ void StartScreen::Render() {
      mNamco->Render();
      mDate->Render();
      mRights->Render();
-
-     
 }

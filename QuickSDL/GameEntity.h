@@ -50,7 +50,8 @@ namespace QuickSDL {
 		//----------------------------------------------------------------------------
 		GameEntity(Vector2 pos = VEC2_ZERO);
 		~GameEntity();
-
+          
+          
 		//------------------------------------------------------------------------------------------
 		//Sets the GameEntity's position, it only updates local space                               
 		//If the object has a parent, its new position is relative to the parent's world position   

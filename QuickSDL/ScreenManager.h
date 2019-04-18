@@ -6,7 +6,7 @@
 
 class ScreenManager {
 private:
-     enum SCREENS {start, play};
+     enum SCREENS {start, play, howToPlay};
 
      static ScreenManager* sInstance;
 

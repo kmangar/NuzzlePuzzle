@@ -29,7 +29,7 @@ namespace QuickSDL {
 		//The Width of the game's window
 		const int SCREEN_WIDTH = 920;
 		//The Height of the game's window
-		const int SCREEN_HEIGHT = 825;
+		const int SCREEN_HEIGHT = 790;
 		//The title of the game's window
 		const char* WINDOW_TITLE = "Nuzzle";
 

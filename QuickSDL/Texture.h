@@ -39,6 +39,8 @@ namespace QuickSDL {
 		SDL_Rect mRenderRect;
 		//Is used to clip the texture from a spritesheet
 		SDL_Rect mClipRect;
+          int id;
+
 
 	public:
 		//--------------------------------------------------------------
@@ -63,6 +65,14 @@ namespace QuickSDL {
 		//------------------------------------------------------------
 		Texture(std::string text, std::string fontpath, int size, SDL_Color color);
 		~Texture();
+
+          void setter(int num) {
+               id = num;
+          }
+
+          int getter() {
+               return id;
+          }
 
 		//----------------------------------------------
 		//Called to render the texture to the screen

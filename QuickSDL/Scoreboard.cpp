@@ -1,7 +1,6 @@
 #include "Scoreboard.h"
 
 Scoreboard::Scoreboard() {
-
      Score(0);
 }
 
