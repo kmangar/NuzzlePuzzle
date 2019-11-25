@@ -7,6 +7,7 @@ Kham Mangar
 Cooper Martin
 Yanet Fonseca-Lopez
 ```
+<a href="https://kmangar.github.io/NuzzlePuzzle/">Click</a> to go to the Github pages link
 
 ## THE GAME 
 This is a number puzzle game called **NUZZLE**. The game will begin with a simple menu asking the user to choose from 2 options,
