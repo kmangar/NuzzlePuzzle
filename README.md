@@ -1,12 +1,6 @@
 # NuzzlePuzzle
 
-This was a group project for CSCI-C 335.
-```
-Group Members:
-Kham Mangar
-Cooper Martin
-Yanet Fonseca-Lopez
-```
+This was a group project for CSCI-C 335. 
 <a href="https://kmangar.github.io/NuzzlePuzzle/">Click</a> to go to the Github pages link
 
 ## THE GAME 
