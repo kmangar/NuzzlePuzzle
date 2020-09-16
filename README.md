@@ -3,7 +3,7 @@
 This was a group project for CSCI-C 335. 
 <a href="https://kmangar.github.io/NuzzlePuzzle/">Click</a> to go to the Github pages link
 
-![](Nuzzle.gif)
+![](./Nuzzle/Nuzzle.gif)
 
 ## THE GAME 
 This is a number puzzle game called **NUZZLE**. The game will begin with a simple menu asking the user to choose from 2 options,
